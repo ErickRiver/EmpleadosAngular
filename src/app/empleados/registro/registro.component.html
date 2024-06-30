@@ -1,0 +1,37 @@
+<form (ngSubmit)="agregarEmpleado()">
+    <div>
+        <label for="numero">NÚMERO DE EMPLEADO</label>
+        <input name="numero" placeholder="Numero de Empleado" [(ngModel)]="nuevoEmpleado.numero" />
+    </div>
+    <div>
+        <label for="nombre">NOMBRE</label>
+        <input id="nombre" name="nombre" [(ngModel)]="nuevoEmpleado.nombre">
+    </div>
+    <div>
+        <label for="correo">CORREO</label>
+        <input id="correo" name="correo" [(ngModel)]="nuevoEmpleado.correo">
+    </div>
+    <div>
+        <label for="telefono">TELÉFONO</label>
+        <input id="telefono" name="telefono" [(ngModel)]="nuevoEmpleado.telefono">
+    </div>
+    <div>
+        <label for="fechaNacimiento">FECHA DE NACIMIENTO</label>
+        <input id="fechaNacimiento" name="fechaNacimiento" type="date" [(ngModel)]="nuevoEmpleado.fechaNacimiento">
+    </div>
+    <div>
+        <label>SEXO</label>
+        <div class="contenedor-sexo">
+            <div class="contenedor-input">
+                <label for="masculino">MASCULINO</label>
+                <input id="masculino" name="sexoMasculino" type="radio" value="Masculino"
+                    [(ngModel)]="nuevoEmpleado.sexo">
+            </div>
+            <div class="contenedor-input">
+                <label for="femenino">FEMENINO</label>
+                <input id="femenino" name="sexoFemenino" type="radio" value="Femenino" [(ngModel)]="nuevoEmpleado.sexo">
+            </div>
+        </div>
+    </div>
+    <button type="submit">Agregar</button>
+</form>

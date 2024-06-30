@@ -1,0 +1,22 @@
+<table>
+    <thead>
+        <tr>
+            <th>Número</th>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Teléfono</th>
+            <th>Fecha de Nacimiento</th>
+            <th>Sexo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let empleado of empleados">
+            <td>{{ empleado.numero }}</td>
+            <td>{{ empleado.nombre }}</td>
+            <td>{{ empleado.correo }}</td>
+            <td>{{ empleado.telefono }}</td>
+            <td>{{ empleado.fechaNacimiento | date }}</td>
+            <td>{{ empleado.sexo }}</td>
+        </tr>
+    </tbody>
+</table>
